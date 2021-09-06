@@ -1,0 +1,93 @@
+.mask, .slidein {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+}
+.mask {
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.slidein {
+  width: 22vw;
+  height: 100vh;
+  right: 0px;
+  padding: 5px 18px;
+  background-color: white;
+  animation: slide 1s;
+  clip-path: inset(0 0 0 0);
+}
+.slideOut {
+  animation: slideOut 1s;
+  clip-path: inset(0 0 0 100%);
+}
+.slidein .movieDetails {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+.slidein img {
+  width: 100%;
+  height: 250px;
+  border-radius: 16px;
+  margin-top: 10px;
+}
+.slidein .arrow {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black;
+  background: none;
+  border: 0;
+}
+.slidein a {
+  width: 75%;
+  margin: auto;
+}
+.watchBtn {
+  background-color: var(--flix-blue);
+  color: white;
+  border: 0;
+  width: 100%;
+  padding: 8px;
+  border-radius: 16px;
+}
+.slidein p {
+  font-size: 14px;
+  margin: 15px 0;
+}
+.slidein h3 {
+  margin: 15px 0;
+}
+
+@keyframes slide {
+  0% {
+    clip-path: inset(0 0 0 100%);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+
+@media screen and (max-width : 600px) {
+  .slidein {
+    width: 100vw;
+  }
+  .slidein img {
+    width: 80%;
+    max-width: 300px;
+    height: 400px;
+    margin: auto;
+  }
+}

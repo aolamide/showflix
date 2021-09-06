@@ -1,0 +1,28 @@
+.layout {
+  display : flex;
+}
+
+.mainBar {
+  width: 78%;
+  padding: 25px;
+}
+
+@media screen and (max-width : 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  .mainBar, .sideBar {
+    width: 100%;
+  }
+  .sideBar {
+    height: fit-content;
+    text-align: center;
+    padding: 12px;
+  }
+  .sideBar a {
+    padding-left: 0;
+  }
+  .sideBar a:not(:first-child) {
+    display: none;
+  }
+}

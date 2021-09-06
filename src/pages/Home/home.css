@@ -1,0 +1,20 @@
+.movieCardsContainer {
+  display: grid;
+  justify-content: space-between;
+  grid-gap: 28px;
+  grid-template-columns: repeat(auto-fill, 210px);
+  margin-top: 25px;
+}
+@media screen and (max-width : 500px) {
+  .movieCardsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .movieCardsContainer .movieCard {
+    width: 80vw;
+    max-width: 400px;
+    height: 500px;
+  }
+}
