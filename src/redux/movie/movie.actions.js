@@ -21,7 +21,7 @@ export const setSearchText = text => async dispatch => {
       type : GET_MOVIES_ERROR,
       payload : ''
     })
-    const response = await axios.get(`https://omdbapi.com/?apikey=${key}&s=${text}`);
+    const response = await axios.get(`https://omdbapi.com/?apikey=${key}&type=movie&s=${text}`);
     if(response.data.Error) {
       return dispatch({
         type : GET_MOVIES_ERROR,
